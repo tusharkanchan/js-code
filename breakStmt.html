@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch</title>
+</head>
+<body>
+   <label>Enter number (1/2/3): </label> <input type="text" id="num">
+    <p id="displayNum"></p>
+    <button onclick="display()">Display Spell</button>
+    <button onclick="displayS()">Display Spell using Switch</button>
+    <script>
+    function display(){
+        var num = document.getElementById('num').value;
+        console.log('num:', num);
+if(num == 1)
+document.getElementById('displayNum').innerHTML = 'ONE';
+else if(num == 2)
+document.getElementById('displayNum').innerHTML = 'Two';
+else if(num == 3)
+document.getElementById('displayNum').innerHTML = 'Three';
+else
+document.getElementById('displayNum').innerHTML = 'INVALID';
+    }
+
+    function displayS(){
+        var x = document.getElementById('num').value;
+        
+        switch(x)
+        {
+            case '1': 
+            document.getElementById('displayNum').innerHTML = 'ONE';
+            break;
+            case '2': 
+            document.getElementById('displayNum').innerHTML = 'TWO';
+            break;
+            case '3': 
+            document.getElementById('displayNum').innerHTML = 'THREE';
+            break;
+            default:
+            document.getElementById('displayNum').innerHTML = 'INVALID';
+            
+        }
+    }
+    </script>
+</body>
+</html>

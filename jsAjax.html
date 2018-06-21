@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data transfer</title>
+</head>
+
+<body>
+    <input type="text" id="contactFullName" placeholder="Enter name">
+    <br>
+    <input type="email" id="contactEmail" placeholder="Enter email">
+    <br>
+    <input type="number" id="contactMobile" placeholder="Enter mobile">
+    <br>
+    <textarea id="contactMessage" placeholder="Enter message"></textarea>
+    <br>
+    <button onclick="submitForm()">Send</button>
+
+    <script>
+        // http://192.168.15.8:8282/codekul/inquiry/enquirySearch?page=0&size=20&startDate=1529001000000&endDate=1529087399059&anyChar=
+        function submitForm() {
+            var name = document.getElementById('contactFullName').value;
+            var email = document.getElementById('contactEmail').value;
+            var phone = document.getElementById('contactMobile').value;
+            var msg = document.getElementById('contactMessage').value;
+            var obj = {
+                applicantName: name,
+                eMail: email,
+                mobileNo: phone,
+                message: msg
+            };
+            xhr = new XMLHttpRequest;
+            xhr.open("POST", "http://192.168.15.3:4444/codekul/inquiry/create", true);
+            xhr.setRequestHeader("content-Type", "application/json");
+            xhr.send(JSON.stringify(obj));
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log("Data send");
+                    alert('Transfered...!!!');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

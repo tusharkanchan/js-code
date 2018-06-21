@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+    <style>
+    .static{
+        height: 400px;
+        width:400px;
+        border: 2px solid black;
+        position: relative;
+    }
+    .relative{
+height: 300px;
+width:400px;
+border: 2px solid blue;
+position: absolute;
+top:50px;
+left:50px;
+
+    }
+    .fixed{
+        background-color: aquamarine;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top:0px;
+        right: 0px;
+
+    }
+    span{
+font-size: 48px;
+font-weight: bold;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="static">Relative div></div>
+    <div class="relative">Absolute Div</div>
+<h1>Image</h1>
+<div class="fixed"><span>&nbsp;+</span></div>
+</body>
+</html>

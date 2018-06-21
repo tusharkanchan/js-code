@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Types</title>
+</head>
+<body>
+    <h1>Data Types</h1>
+    <button onclick="findDataType()">Find Data Type</button>
+    <p id="displayDataType"></p>
+    <script>
+    function findDataType(){
+        var data= 'hhhh';
+        // if(undefined === null)
+        // console.log('Success');
+        var stateType = typeof(data);
+        document.getElementById('displayDataType').innerHTML = data + ' => ' + stateType;
+    }
+    </script>
+</body>
+</html>

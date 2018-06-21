@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animation</title>
+<style>
+    div{
+        /* position: absolute; */
+        /* top: 200px; */
+        /* left: 100%; */
+        width: 20%;
+        height: 20%;
+        /* line-height: 20%; */
+        text-align: center;
+        background-color: rgb(207, 124, 124);
+        animation: demo 4s linear 1s infinite forwards;
+        box-shadow: 30px 0px 30px greenyellow;
+
+    }
+  
+
+    @keyframes demo{
+        0%{
+            margin-left: 0%;
+            background-color: blue;
+            /* transform: rotate(72deg); */
+        }
+        20%{
+            margin-left: 20%;
+            background-color: blue;
+            /* transform: rotate(144deg); */
+            
+        }
+        40%{
+            margin-left: 40%;
+            background-color: blue;
+            /* transform: rotate(216deg); */
+
+        }
+        60%{
+            margin-left: 60%;
+            background-color: blue;
+            /* transform: rotate(288deg); */
+        
+        }
+        80%{
+            margin-left: 80%;
+            background-color: blue;
+            /* transform: rotate(360deg); */
+            
+        }
+        /* 100%{ */
+            /* margin-left: 100%; */
+            /* background-color: blue; */
+            /* transform: rotate(0deg); */
+            
+        /* } */
+        
+
+
+    }
+</style>
+
+</head>
+
+<body>
+    <div>hello</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operator 2</title>
+</head>
+<body>
+    <p>Ternary</p>
+    <button onclick="getResult()">Get REsult</button>
+
+    <p>Logical Operator</p>
+    <button onclick="getLogical()">Get Logical</button>
+
+    <p>Bitwise Operator</p>
+    <button onclick="getBitwise()"> Get Bitwise</button>
+
+    <!-- & | ^ << >> --> 
+
+    <script>
+    function getResult(){
+(2 == 3) ? console.log('Equal') : console.log('Not Equal');
+    }
+// && || !
+    function getLogical(){
+if(!(2 == 2))
+{
+    console.log('in if block');
+}
+else{
+    console.log('in else block');
+}
+
+    }
+
+    </script>
+</body>
+</html>

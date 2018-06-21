@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loop</title>
+</head>
+<body>
+    <h1>
+        Loops
+    </h1>
+    <button onclick="display()">Display</button>
+    <p id="forResult"></p>
+    <hr>
+    <p id="whileResult"></p>
+    <hr>
+    <p id="doWhileResult"></p>
+    <script>
+    function display(){
+        var i;
+        var numbers='';
+        for(i=1; i<=5; i++)
+        {
+            numbers += i + '<br>';
+        }
+        document.getElementById('forResult').innerHTML = numbers;
+    }
+    </script>
+</body>
+</html>

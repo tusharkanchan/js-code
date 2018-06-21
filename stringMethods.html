@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String Methods</title>
+</head>
+<body>
+    <script>
+    var str="Codekul Institute Training Institute";
+        
+    console.log('OK String:',str);
+    var length = str.length;
+    console.log("String Length: ", length);
+    //Index of
+    console.log('Index of Training:', str.indexOf("Training"));
+    console.log('Index of Training:', str.lastIndexOf("Training"));
+//search
+console.log('Slice Training:', str.slice(8,16));
+//slice with negative index, substring
+console.log('Substring Training:', str.substr(8,9));
+console.log('Replace: ', str.replace(/Institute/g, "Institute111"));
+console.log('UPPER CAse: ', str.toUpperCase());
+console.log('UPPER CAse: ', str.toLowerCase());
+console.log('Concat: ', str.concat(", ", "Kothrud"));
+console.log("Char At: ", str.charAt(8));
+console.log("CharCode  At: ", str.charCodeAt(8));
+
+console.log('===========================');
+var str1 = "a b c d";
+console.log("String : ", str1);
+
+var arr = str1.split(" ");
+console.log("Array : ", arr[1]);
+
+
+    </script>
+</body>
+</html>

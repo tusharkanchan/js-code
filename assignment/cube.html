@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cube</title>
+<style>
+    /* .scene{ */
+        /* margin: 100px; */
+        /* width: 300px; */
+        /* height: 300px; */
+        /* position: relative; */
+        /* perspective: 600px; */
+        /* transform-style: preserve-3d; */
+
+    /* } */
+    .cube {
+    
+        margin: 100px;
+        width: 150px;
+        height: 150px;
+        position: relative;
+        perspective: 600px;
+        transform-origin: preserve-3d;
+        transform: rotateY(180deg);
+        animation: cube 4s linear 1s infinite forwards;
+    }
+    .cube-face
+{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background:red;
+    opacity:0.8;
+}
+.cube-face-front{
+    
+    background:  linear-gradient(to bottom left, green, yellow);
+    transform: translate3d(0,0,75px);
+}
+.cube-face-back{
+    background: orange;
+    transform: rotateY(180deg) translate3d(0,0,75px);
+
+}
+.cube-face-left{
+    background: green;
+    transform: rotateY(-90deg) translate3d(0,0,75px);
+
+}
+.cube-face-right{
+    background: magenta;
+    transform: rotateY(90deg)translate3d(0,0,75px);
+
+}
+.cube-face-top{
+    background: blue;
+    transform: rotateX(90deg)
+    translate3d(0,0,75px);
+}
+.cube-face-bottom
+{
+
+    background: red;
+    transform: rotateX(-90deg) translate3d(0,0,75px);
+}
+@keyframes cube{
+    0%{
+            margin-left: 0%;
+            /* background-color: blue; */
+            transform: rotate(72deg); 
+        }
+        20%{
+            margin-left: 20%;
+            /* background-color: blue; */
+             transform: rotate(144deg);
+            
+        }
+        40%{
+            margin-left: 40%;
+            /* background-color: blue; */
+             transform: rotate(216deg);
+
+        }
+        60%{
+            margin-left: 60%;
+            /* background-color: blue; */
+             transform: rotate(288deg); 
+        
+        }
+        80%{
+            margin-left: 80%;
+            /* background-color: blue; */
+             transform: rotate(360deg);
+            
+        }
+        /* 100%{ */
+            /* margin-left: 100%; */
+            /* background-color: blue; */
+            /* transform: rotate(0deg); */
+            
+        /* } */
+        
+
+}
+</style>
+
+</head>
+<body>
+    
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right">
+            </div>
+            <div class="cube-face cube-face-top"></div>
+ <div class="cube-face cube-face-bottom"></div>
+         </div>
+    
+</body>
+</html>

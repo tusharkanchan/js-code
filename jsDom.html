@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Properties</title>
+</head>
+<body>
+    <p class="para">This is first Para</p>
+    <p class="para" id="red">This is second Para</p>
+    <p>without class</p>
+    <input id="myName" placeholder="Enter name">
+    <!-- <button onclick="getData()">Get Data</button> -->
+    <button id="getDataBtn" >Get Data</button>
+    <script>
+        // document.getElementById('getDataBtn').addEventListener("click", getData);
+        // document.getElementById('getDataBtn').onclick = getData;
+        document.getElementById('getDataBtn').addEventListener("click", getData);
+        document.getElementById('getDataBtn').addEventListener("click", showAlert);
+        function showAlert(){
+            document.write('CodekulInstitute');
+            // alert('alert');
+        }
+
+        // event.preventDefault();
+        // event.stopPropagation();
+    function getData(){
+        // var data = document.getElementsByClassName('para');
+        var data = document.getElementsByTagName('P');
+        for(i=0; i<=2; i++)
+        console.log('data : ', data[i].innerHTML);
+        console.log("Node value : ",document.getElementById('red').firstChild.nodeValue);
+    }
+
+    // document.getElementById('red').style.color = 'red';
+    // document.getElementById('myName').setAttribute('placeholder', '');
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    console.log('d = ', d);
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    console.log('Time conversion: ', d.setTime(d.getTime() + (exdays*24*60*60*1000)));
+    var expires = "expires=" + d.toGMTString();
+    console.log('Expires : ',expires );
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    console.log('Cookie Value: ', document.cookie);
+   var value =  document.cookie;
+  var parts = document.cookie.split( cname + "=");
+  console.log(parts);
+  if (parts.length == 2) 
+   return parts.pop();
+//return document.cookie;
+}
+function checkCookie() {
+    var user=getCookie("username");
+    console.log('user', user);
+    if(user == undefined)
+    {
+       
+        user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+    else{
+        alert("Welcome again " + user);
+    }
+  
+}
+</script>
+</head>
+<body onload="checkCookie()">
+</body>
+</html>
