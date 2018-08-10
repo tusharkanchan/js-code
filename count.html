@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body bgcolor=skyblue>
+    <form name="form1">
+        <input type="text" id="txt">
+        <input type="button" value="start" onclick="timer()">
+
+
+    </form>
+    <script>
+    var c=0;
+    function timer()
+    {
+        setInterval("count()",10000);
+    }
+    function count()
+    {
+        document.getElementById("txt").value=c;
+        c++;
+    }
+    </script>
+</body>
+</html>
